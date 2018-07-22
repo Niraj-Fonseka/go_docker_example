@@ -20,6 +20,6 @@ install:
 
 deploy:
   provider: script
-  script: ${GOPATH}/src/github.com/Niraj-Fonseka/go_docker_example/docker_push.sh
+  script: bash docker_push.sh
   on:
     branch: master
