@@ -27,7 +27,11 @@ func main() {
 			"second": "second_deployment_works",
 		})
 	})
-
+	r.GET("/third", func(c *gin.Context) {
+		c.JSON(200, gin.H{
+			"second": "third_deployment_works",
+		})
+	})
 	fmt.Println("running on port 8080")
 	r.Run() // listen and serve on 0.0.0.0:8080
 }
