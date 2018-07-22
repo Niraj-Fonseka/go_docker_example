@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Niraj-Fonseka/go_docker_example.svg?branch=master)](https://travis-ci.org/Niraj-Fonseka/go_docker_example)
+
 # Testing Simple docker application with minikube
 
 https://kubernetes.io/docs/tutorials/hello-minikube/
