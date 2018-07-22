@@ -6,4 +6,10 @@ docker push dockerfonseka/dockergoapptwo
 
 echo "---- Post to the Deployment Manager ----"
 
-curl http://www.google.com
+
+echo "Health check"
+curl "$DEPLOY_HEALTH"
+
+echo "DEPLOY !!!"
+
+curl "$DEPLOY_APP"
