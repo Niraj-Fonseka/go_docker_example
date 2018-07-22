@@ -13,3 +13,16 @@ git:
 # Skip the install step. Don't `go get` dependencies. Only build with the code
 # in vendor/
 install: true
+
+
+services:
+  - docker
+
+before_install:
+  - docker build -t dockerfonseka/dockergoapp:latest .
+
+deploy:
+  provider: script
+  script: bash docker_push
+  on:
+    branch: master
