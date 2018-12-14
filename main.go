@@ -1,8 +1,9 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"fmt"
+
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
@@ -20,16 +21,6 @@ func main() {
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "Health is ok",
-		})
-	})
-	r.GET("/second", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"second": "second_deployment_works",
-		})
-	})
-	r.GET("/third", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"second": "third_deployment_works",
 		})
 	})
 	fmt.Println("running on port 8080")
